@@ -46,13 +46,16 @@ function QRCodeDisplay(props: QRCodeDisplayProps) {
 
   return (
     <div>
-      <p id={WALLETCONNECT_CTA_TEXT_ID} className="walletconnect-qrcode__text">
-        {props.text.scan_qrcode_with_wallet}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: svg }}></div>
-      <div className="walletconnect-modal__footer">
-        <a onClick={copyToClipboard}>{props.text.copy_to_clipboard}</a>
+      {/*<p id={WALLETCONNECT_CTA_TEXT_ID} className="walletconnect-qrcode__text">*/}
+      {/*  {props.text.scan_qrcode_with_wallet}*/}
+      {/*</p>*/}
+      <div className="walletconnect-qrcode__code">
+        <div dangerouslySetInnerHTML={{ __html: svg }}></div>
       </div>
+
+      {/*<div className="walletconnect-modal__footer">*/}
+      {/*  <a onClick={copyToClipboard}>{props.text.copy_to_clipboard}</a>*/}
+      {/*</div>*/}
       <Notification message={notification} />
     </div>
   );

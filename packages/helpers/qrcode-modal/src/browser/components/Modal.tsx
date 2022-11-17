@@ -22,6 +22,9 @@ import LinkDisplay from "./LinkDisplay";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import QRCodeDisplay from "./QRCodeDisplay";
 
+import { APPSTORE_LOGO_SVG_URL } from "../assets/appstore";
+import { GOOLEPLAY_LOGO_SVG_URL} from "../assets/googleplay";
+
 import { WALLETCONNECT_MODAL_ID } from "../constants";
 import { TextMap } from "../types";
 
@@ -145,6 +148,21 @@ function Modal(props: ModalProps) {
           ) : (
             <LinkDisplay {...displayProps} links={links} errorMessage={errorMessage} />
           )}
+        </div>
+
+        <div className='walletconnect-store'>
+          <div className='walletconnect-store-item'>
+            <img  src={APPSTORE_LOGO_SVG_URL} alt="APPSTORE_LOGO_SVG_URL" onClick={() => {
+              window.open("https://itunes.apple.com/kr/app/apple-store/id1459475831", "_blank");
+            }}/>
+          </div>
+          <div className='walletconnect-store-item'>
+            <img  src={GOOLEPLAY_LOGO_SVG_URL} alt="GOOLEPLAY_LOGO_SVG_URL" onClick={() => {
+              window.open("http://play.google.com/store/apps/details?id=io.talken.wallet", "_blank");
+            }}/>
+          </div>
+
+
         </div>
       </div>
     </div>

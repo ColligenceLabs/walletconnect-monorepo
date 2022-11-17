@@ -49,23 +49,20 @@ export const WALLETCONNECT_STYLE_SHEET = `:root {
 }
 
 .walletconnect-modal__headerLogo {
-  height: 21px;
+  height: 38px;
+  margin-right: 5px;
 }
 
 .walletconnect-modal__header p {
-  color: #ffffff;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
   margin: 0;
-  align-items: flex-start;
-  display: flex;
-  flex: 1;
   margin-left: 5px;
 }
 
 .walletconnect-modal__close__wrapper {
   position: absolute;
-  top: 0px;
+  top: -30px;
   right: 0px;
   z-index: 10000;
   background: white;
@@ -126,6 +123,34 @@ export const WALLETCONNECT_STYLE_SHEET = `:root {
   width: 100%;
 }
 
+.walletconnect-qrcode__code {
+  padding: 30px 20px;
+  border: 1px solid #9f9f9f;
+  border-radius: 20px;
+}
+
+.walletconnect-store {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px 0px 10px 0px;
+}
+
+.walletconnect-store-item {
+  /*width: 170px;*/
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.walletconnect-store-item img {
+  height: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .walletconnect-qrcode__text {
     font-size: 4vw;
@@ -167,11 +192,20 @@ export const WALLETCONNECT_STYLE_SHEET = `:root {
 
 @media only screen and (max-width: 768px) {
   .walletconnect-modal__header {
-    height: 130px;
+    /*height: 130px;*/
   }
   .walletconnect-modal__base {
     overflow: auto;
   }
+  .walletconnect-store-item {
+    /*width: 170px;*/
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
 }
 
 @media only screen and (min-device-width: 415px) and (max-width: 768px) {
@@ -179,12 +213,28 @@ export const WALLETCONNECT_STYLE_SHEET = `:root {
     max-width: 768px;
     box-sizing: border-box;
   }
+  .walletconnect-store-item {
+    /*width: 170px;*/
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 415px) {
   #content {
     max-width: 414px;
     box-sizing: border-box;
+  }
+  .walletconnect-store-item {
+    /*width: 170px;*/
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 }
 
@@ -238,12 +288,9 @@ export const WALLETCONNECT_STYLE_SHEET = `:root {
 .walletconnect-modal__header {
   align-items: center;
   display: flex;
-  height: 26px;
-  left: 0;
-  justify-content: space-between;
-  position: absolute;
-  top: -42px;
+  justify-content: center;
   width: 100%;
+  margin: 10px 0px 15px 0px;
 }
 
 .walletconnect-modal__base .wc-logo {
