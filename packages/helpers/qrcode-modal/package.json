@@ -1,6 +1,6 @@
 {
-  "name": "@walletconnect/qrcode-modal",
-  "version": "1.7.1",
+  "name": "talken-qrcode-modal",
+  "version": "1.7.2",
   "description": "QR Code Modal for WalletConnect",
   "scripts": {
     "clean": "rm -rf dist",
@@ -64,6 +64,7 @@
     "svg-url-loader": "5.0.0",
     "ts-loader": "6.2.2",
     "ts-node": "9.0.0",
+    "typescript": "4.1.6",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10"
   },
